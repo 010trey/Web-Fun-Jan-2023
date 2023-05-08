@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="form-wrapper">
+		<h2>Registration Form</h2>
+		<form action="register.php" method="POST">
+			<label for="name">first Name:</label>
+			<input type="text" name="first name" id="first name" required>
+			<label for="name">last Name:</label>
+			<input type="text" name="last name" id="last name" required>
+
+			<label for="email">Email address:</label>
+			<input type="email" name="email" id="email" required>
+
+			<label for="address">password:</label>
+			<input type="text" name="password" id="password" required>
+			<label for="name">confirm password:</label>
+			<input type="text" name="confirm password" id="confirm password" required>
+			<label for="phone">a shot description about myself:</label>
+			<input type="tel" name="phone" id="phone" required>
+
+			<label for="dob">Date of Birth:</label>
+			<input type="date" name="dob" id="dob" required>
+
+			<label for="gender">Gender:</label>
+			<select name="gender" id="gender" required>
+				<option value="">Select Gender</option>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+				<option value="other">Other</option>
+			</select>
+            
+			<button type="submit">create account</button>
+		</form>
+	</div>
+</body>
+</html>

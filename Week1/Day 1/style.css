@@ -1,0 +1,68 @@
+.form-wrapper {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+h2 {
+	text-align: center;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+button[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+PHP (register.php):
+
+<?php
+// Check if the form was submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	// Collect the form data
+	$name = $_POST["name"];
+	$email = $_POST["email"];
+	$address = $_POST["address"];
+	$phone = $_POST["phone"];
+	$dob = $_POST["dob"];
+	$gender = $_POST["gender"];
+
+	// Insert the data into the database (you will need to modify this code to match your specific database)
+	$conn = mysqli_connect("localhost", "username", "password", "dbname");
+
+	$sql = "INSERT INTO students (name, email, address, phone, dob, gender) 
+		VALUES ('$name', '$email', '$address', '$phone', '$dob', '$gender')";
+
+	if (mysqli_query($conn, $sql)) {
+		echo "Registration successful!";
+	} else {
+		echo "Error: " . mysqli_error($conn);
+	}
+
+	mysqli_close($conn);
+}
+?>
