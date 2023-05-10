@@ -35,34 +35,4 @@ button[type="submit"] {
 	padding: 10px 20px;
 	border: none;
 	border-radius: 5px;
-	cursor: pointer;
-}
-
-PHP (register.php):
-
-<?php
-// Check if the form was submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	// Collect the form data
-	$name = $_POST["name"];
-	$email = $_POST["email"];
-	$address = $_POST["address"];
-	$phone = $_POST["phone"];
-	$dob = $_POST["dob"];
-	$gender = $_POST["gender"];
-
-	// Insert the data into the database (you will need to modify this code to match your specific database)
-	$conn = mysqli_connect("localhost", "username", "password", "dbname");
-
-	$sql = "INSERT INTO students (name, email, address, phone, dob, gender) 
-		VALUES ('$name', '$email', '$address', '$phone', '$dob', '$gender')";
-
-	if (mysqli_query($conn, $sql)) {
-		echo "Registration successful!";
-	} else {
-		echo "Error: " . mysqli_error($conn);
-	}
-
-	mysqli_close($conn);
-}
-?>
+	cursor: pointer;}

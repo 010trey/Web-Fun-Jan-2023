@@ -1,0 +1,23 @@
+//console.log("liftoff");
+
+//*====== count possitive ======
+var countposittive = 0;
+//
+//            
+var numbers = [3,4,-2,7,16,-8,0];
+//your code here! 
+//!steps 
+// ? itrate throuther the list of numbers (for loop)
+// ?for each iteration:
+//* check whether the value in the current index is positive 
+//* if yes: increment the count by 1
+//* display the count 
+
+for (var 1 = 0; 1 < numbers.length; 1++) [
+    if (numbers[1] < 0) {
+        countposittive++ 
+    }
+
+]
+
+console.log(*)
