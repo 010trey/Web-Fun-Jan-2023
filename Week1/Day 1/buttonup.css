@@ -1,0 +1,40 @@
+#container{
+    background-color: rgb(224, 219, 212);
+    width:500px;
+    height: 500px;
+    margin: 4em;
+    padding-top:1em ;
+}
+#box-1{
+    background-color: rgb(124, 118, 118);
+    color: aqua;
+    height: 10px;
+    width: 70px;
+    margin: 1em;
+    padding: 10px 50px 20px;
+    font-size: medium;
+    font-style: italic;
+    border-radius: 1%;
+    border-radius: 50%
+}
+#box-2{
+    background-color: beige;
+    height: 1%;
+    width: 1%;
+    border: 1px solid rgb(150, 141, 141);
+    margin: 1em;
+    padding: 10px 50px 20px;
+    border-radius: 30px; 
+}
+
+#box-3{
+    background-color: blue;
+    color: white;
+    height: 10px;
+    width: 150px;
+    border: 2px solid black;
+    margin: 1em;
+    padding: 10px;
+    border-radius: 25% 10%;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
