@@ -1,0 +1,23 @@
+/* Style the navbar */
+div{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    width: 700px;
+    margin: 1em;
+}
+.h1{
+    float:inline-end;
+    color: white;
+    float: left;
+    margin: 1em;
+    justify-items: start;
+}
+.h2{
+    padding: 1em;
+    margin: 2em;
+    display: flex-block;
+    align-items: center;
+    justify-items: end;
+}
