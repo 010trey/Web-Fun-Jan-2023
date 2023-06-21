@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between; 
+    background-color: black;
+    padding: 5px;
+    color: white;
+}
+h1 {
+    flex: 2;
+}
+ul {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.btn {
+    background-color: aqua;
+    color: white;
+    box-shadow: 2px;
+}
