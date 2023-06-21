@@ -1,0 +1,46 @@
+body{
+    height: 800;
+    background-color: black 
+}
+
+#dojo {
+    border: 1em solid green;
+    margin: 1em;
+    padding: em;
+    width: 800px;
+    height: 250px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#tj {
+
+    border: 1em solid red;
+    margin: 1em;
+    padding: em;
+    width: 800px;
+    height: 250px;
+    display: flex;
+    float:inline-right;
+    background-color:blanchedalmond;
+    align-items: center;
+    justify-content: space-around;
+}
+#t {
+    border: 1em solid white;
+    margin: 1em;
+    padding: em;
+    width: 800px;
+    height: 250px;
+    background-color:blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+img {
+    padding: 1em;
+    margin: 1em;
+    height: 200px;
+    width: 200px;
+}
