@@ -1,0 +1,14 @@
+.header{
+    padding: 2em;
+    height: 50px;
+    width: 500px;
+    background-color: rgb(16, 181, 213);
+}
+.box{
+    height: 280px;
+    width: 563px;
+    background-color:bisque
+}
+.box2{
+    margin-left: 3em;
+}
