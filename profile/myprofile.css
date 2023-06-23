@@ -1,14 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.com{
+    margin: 5px;
+    padding: 5px;
+    margin-top: 0;
+}
+
 .header{
-    padding: 2em;
-    height: 50px;
-    width: 500px;
+    height: 100px;
+    width: 440px;
     background-color: rgb(16, 181, 213);
 }
 .box{
-    height: 280px;
-    width: 563px;
-    background-color:bisque
+    display: flex;
+}
+.soft{
+    margin: 10px;
+    padding: 10px; 
+
+}
+.box1{
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 10px 5px 5px black;
+    width: 430px;
+    height: 350px;
 }
 .box2{
-    margin-left: 3em;
+    padding: 10px;
+    box-shadow: 5px 10px 5px black;
+    height: 200px;
+    width: 200px;
+    justify-content: space-between;
+    margin: 10px;
 }
+.box2 h4{
+    background-color: black;
+    color: white;
+    width: 210px;
+    height: 50px;
+}
+.box3{
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 5px 10px 5px black; 
+    height: 300px;
+    width: 190px;
+
+}
+.box3 h4{
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 50px; 
+}
+.come{
+    justify-content: space-between;
+    box-shadow: 5px 10px 5px black; 
+    height: 150px;
+    width: 450px;
+}
+.come h3{
+    background-color: black;
+    color: white;
+    width: 450px;
+    height: 50px;  
+}
+.end{
+    width: 200px;
+    height: 50px;  
+}
+
