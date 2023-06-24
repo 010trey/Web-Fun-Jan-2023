@@ -1,0 +1,128 @@
+/* RESET TO DEFAULT */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* CONTAINER CONTENT  */
+.container {
+    margin: 0 auto;
+    width: 1000px;
+    min-height: 500px;
+    padding: 10px;
+    background-color: #062134;
+}
+    /* NAVIGATION CONTENT */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        padding: 10px;
+        background-color: black;
+        top: 0;
+        /* top: 50px; */
+        /* right: 20px; */
+    }
+        h1{
+            font-weight: lighter;
+        }
+        span{
+            color: blue;
+        }
+        li{
+            display: inline-block;
+            margin-left: 40px;
+        }
+        li:first-child{
+            color:rgb(27,67,95);
+        }
+    /* MAIN CONTENT */
+    main{
+        background-color: white;
+        padding: 10px;
+    }
+        main img {
+            width: 100%;
+            /* margin-bottom: 20px; */
+        }
+        /* SUB-CONTENT */
+        .sub-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+            /* CARD CONTENT  */
+            .card {
+                background-color: rgb(20,104,168);
+                width: 30%;
+                padding: 10px;
+                color:  white;
+            }
+            .card> img {
+                width:30px;
+                margin-top: 5px;
+            }
+            .card > h3 {
+                display: inline-block;
+                font-size: 20pt;
+                font-weight: lighter;
+            }
+            .card p {
+                /* top-bottom(10px)  left_right(5px)*/
+                padding: 10px 5px;
+                margin-bottom: 10px;
+            }
+            .card button {
+                padding: 10px 20px;
+                background-color: rgb(25,142,216);
+                color:white;
+                border: none;
+                border-radius: 10%;
+            }
+            .testimonial {
+                margin-top: 10px;
+                display: flex;
+            }
+            .flex-1 {
+                width: 65%;
+            }
+            .flex {
+                display: flex;
+                /* justify-content: space-between; */
+                margin-top: 5px;
+            }
+            .flex p {
+                margin-left: 10px;
+            }
+
+            .flex-2 {
+                /* background-color: aqua; */
+                width: 33%;
+                min-height: 100px;
+                margin-left: 25px;
+            }
+
+            /* Footer */
+            footer {
+                background-color: aquamarine;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 60px;
+                position:;
+                bottom: 50px;
+            }
+            footer p{
+                margin: 10px;
+            }
+            .trey{
+                background-color: rgb(160, 160, 228);
+                height: 100px;
+                width: 300px;
+                border-radius: 10px 5px;
+            }
+        
