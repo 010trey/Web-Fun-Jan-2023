@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeIt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header+nav+main -->
+
+        <!-- Start Header -->
+        <header class="flex-items">
+            <!-- .left-header+.right-header -->
+            <!-- Left Header -->
+            <div class="left-header flex-items">
+                <img src="./images/cat.png" alt="Cat Logo">
+                <h1>CodeIt</h1>
+                <div>
+                    <input type="text" placeholder=" search" id="search">
+                    <button onclick="find()">Go</button>
+                </div>
+            </div>
+            <!-- Right Header -->
+            <div class="right-header flex-items">
+                <button class="get-app">Get App</button>
+                <button class="log-in">Log In</button>
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <!--Start Nav  -->
+        <nav>
+            <div class="top-nav flex-items">
+                <img src="./images/cat.png" alt="Cat Logo">
+                <h2>c/Dojo</h2>
+                <button onclick="removeButton(this)">Join</button>
+            </div>
+            <ul class="flex-items">
+                <li><a class="active" href="#">Posts</a> </li>
+                <li> <a href="#">Wiki</a></li>
+                <li> <a href="#">c/Dojo</a></li>
+                <li><a href="#">Discord</a></li>
+            </ul>
+        </nav>
+        <!-- End Nav -->
+
+        <!--Start Main  -->
+        <main class="flex-items">
+            <div class="left-main">
+                <div class="left-card flex-items">
+                    <div class="votes">
+                        <img class="arrow" onclick="voteUp('vote-1')" src="./images/up-arrow.png" alt="up">
+                        <h3 id="vote-1">29</h3>
+                        <img class="arrow" onclick="voteDown('vote-1')" src="./images/down-arrow.png" alt="down">
+                    </div>
+                    <div class="project">
+                        <h2>Best of Project Week 2021!</h2>
+                        <img src="./images/image1.webp" alt="project">
+                        <div class="comments flex-items">
+                            <img src="./images/chat.png" class="arrow" alt="Chat">
+                            <P>42 comments</P>
+                            <img class="arrow" src="./images/share.png" alt="share">
+                            <p>Share</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-card flex-items">
+                    <div class="votes">
+                        <img class="arrow" onclick="voteUp('vote-2')" src="./images/up-arrow.png" alt="up">
+                        <h3 id="vote-2">17</h3>
+                        <img class="arrow" onclick="voteDown('vote-2')" src="./images/down-arrow.png" alt="down">
+                    </div>
+                    <div class="project">
+                        <h2>Best of Project Week 2021!</h2>
+                        <img src="./images/image1.webp" alt="project">
+                        <div class="comments flex-items">
+                            <img src="./images/chat.png" class="arrow" alt="Chat">
+                            <P>42 comments</P>
+                            <img class="arrow" src="./images/share.png" alt="share">
+                            <p>Share</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="right-main">
+                <div class="right-card">
+                    <h3>About the Dojo</h3>
+                    <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam impedit nostrum mollitia
+                        perferendis magnam minima necessitatibus sapiente accusantium eaque cumque.
+                    </P>
+                </div>
+                <div class="right-card">
+                    <h3>Discord</h3>
+                    <div class="card-content">
+                        <button>discord.gg/cddojo</button>
+                    </div>
+
+                </div>
+                <div class="right-card">
+                    <h3>c/Dojo Rules</h3>
+                <ol class="card-content">
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <!--End Main -->
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
