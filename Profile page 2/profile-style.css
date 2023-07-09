@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+img{
+    border-radius: 50%;
+}
+/** Topbar **/
+ul {
+    list-style-type: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+.nav, .nav-links, .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav{
+    width: 30em;
+}
+.nav-links{
+    flex: 2;
+}
+
+.nav-title{
+    flex: 1;
+}
+
+.topbar{
+    padding: 1em 20%;
+    background-color: #333333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+button{
+    color: white;
+    background-color: #17a2b8;
+    border: 2px solid black;
+    padding: 4px 6px;
+    box-shadow: 2px 2px black;
+}
+.active {
+    font-weight: 600;
+}
+
+/* content */
+
+.content{
+    padding: 20px 20%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/** user card **/
+
+.user-card {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.user-content{
+    padding:  3%;
+}
+
+#avatar {
+    width: 90px;
+    position: absolute;
+    top: 10%;
+    left: 6%;
+    border: 4px solid white;
+    box-shadow: 0px 0px 3px;
+}
+.user-cover{
+    height: 36%;
+    width: 100%;
+    background-color: #17a2b8;
+}
+.map-icon {
+    width: 12px;
+}
+.gear-icon {
+    width: 18px;
+}
+.address {
+    width: 70px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.edit {
+    width: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills {
+    padding: 10px 0;
+}
+
+/** Education section **/
+
+.education{
+    width: 100%;
+}
+
+.education h2 {
+    background-color: #333333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.date {
+    color: grey;
+}
+.education-content p, .education h3 {
+    padding: 4px 20px;
+}
+.education-content {
+    padding: 6px 0;
+}
+
+.main {
+    flex: 4;
+    padding-right: 20px;
+    height: 1200px;
+}
+
+
+/** Social sidebar */
+
+.social-sidebar{
+    height: 500px;
+    flex: 1;
+    position: sticky;
+    top: 90px;
+}
+
+.requests{
+    height: fit-content;
+}
+.connections{
+    height: fit-content;
+}
+/* .main div > div {
+    margin-bottom: 20px;
+} */
+
+.social-sidebar > div {
+    margin-bottom: 20px;
+}
+
+.social-icons{
+    width: 24px;
+    height: 24px;
+}
+#user-img{
+    width: 40px;
+}
+.header, .user, .user-name, .actions, .more {
+    display: flex;
+}
+.header {
+    background-color: #333333;
+    color: white;
+    padding: 10px 30px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.border {
+    border-right: 3px solid grey;
+    border-bottom: 3px solid grey;
+    border-left: 3px solid grey;
+}
+.user {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+
+.user-name {
+    justify-content: space-around;
+    width: 130px;
+    align-items: center;
+    padding: 5px 0;
+}
+.actions {
+    justify-content: space-evenly;
+    width: 100px;
+}
+
+#counter{
+    background-color: honeydew;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 50%;
+}
+.more {
+    padding: 5px 12px;
+}
