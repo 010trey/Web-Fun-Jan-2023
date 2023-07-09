@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>
+        Forms
+    </h1>
+    <hr>
+    <form action="/process" method="post">
+        <div>
+            Username : 
+            <input type="text" name="username" id="username">
+        </div>
+        <br>
+        <div>
+            <label for="">Email : </label>
+            <input type="email" name="email" id="email">
+        </div>
+        <br>
+        <div>
+            <!-- <label for="pass">Password : </label> -->
+            <input type="password" name="password" id="pass" placeholder="Password">
+        </div>
+        <br>
+        <div>
+            <label for="birth_date">Birth Date : </label>
+            <input type="date" name="birth_date" id="birth_date">
+        </div>
+        <br>
+        <div>
+            Favorite Color <input type="color" name="color" id="">
+        </div>
+        <div>
+            <label for="">Subscribe to our channel ?</label>
+            <input type="checkbox" name="" id="">
+        </div>
+        <div>
+            Are You Happy ?
+            <label for="">Yes</label>
+            <input type="radio" name="happy" id="">
+            <label for="">No</label>
+            <input type="radio" name="happy" id="">
+        </div>
+        <div>
+            <select name="" id="">
+                <option value="1">Java</option>
+                <option value="2">C++</option>
+            </select>
+        </div>
+        <div>
+            Comment : 
+            <textarea name="" id="" cols="40" rows="5"></textarea>
+        </div>
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+    </form>
+    <h3>----------------FROM--------------------</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <input type="submit" value="Search in GOOGLE">
+    </form>
+    <h3>----------------FROM 2 --------------------</h3>
+    <form action="https://www.youtube.com/results">
+        <button>Button</button>
+        <input type="text" name="search_query">
+        <button>Search</button>
+    </form>
+</body>
+</html>

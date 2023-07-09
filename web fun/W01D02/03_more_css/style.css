@@ -1,0 +1,22 @@
+* {
+    margin: 10px auto;
+}
+.wrapper {
+    width: 800px;
+    outline: 3px solid blue;
+    padding: 20px;
+}
+span {
+    color: red;
+}
+p {
+    padding: 2px;
+    margin: 3px;
+}
+.big-p {
+    /* background-color: aquamarine; */
+    overflow: scroll;
+    height: 100px;
+    color: white;
+    background: white url('blue-bg.avif'); 
+}
