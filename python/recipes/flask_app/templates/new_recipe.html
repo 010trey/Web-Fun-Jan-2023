@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>LogReg</title>
+</head>
+<body>
+    <div class="d-flex justify-content-between m-5">
+        <h2>Add a New book!</h2>
+        <div>
+            <a href="/dashboard" class="btn btn-secondary">Back Home</a>
+            <a href="/logout" class="btn btn-danger">LOGOUT</a>
+        </div>
+    </div>
+    <div class="row text-center m-5">
+        <div class="col-6">
+            <form action="/recipes/create" method="post">
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea name="description" id="" cols="30" rows="5" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="">Instructions</label>
+                    <textarea name="instructions" id="" cols="30" rows="7" class="form-control"></textarea>
+                </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="">Date Cooked/Made:</label>
+                <input type="date" name="date" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Under 30 minutes?</label>
+                <input type="radio" name="under" class="form-control" value="1" checked>
+                <label>Yes</label>
+                <input type="radio" name="under" class="form-control" value="0">
+                <label>No</label>
+            </div>
+            {%for message in get_flashed_messages()%}
+            <p class="text-danger">{{message}}</p>
+            {%endfor%}
+            <input type="submit" value="Submit" class="btn btn-success">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>First Template 🎈🎈🎈🎈</h1>
+    <h2>Chosen Color : {{color}} </h2>
+    <h2>Chosen Number : {{number}}</h2>
+    <div class="container">
+        <!-- <div class="circle" style="background-color: {{color}};"></div> -->
+        {% for i in range(number) %}
+            <div class="circle" style="background-color: {{color}};"></div>
+        {% endfor %}
+    </div>
+    <div class="card shadow border">
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            {% for student in student_info%}
+                <tr 
+                {% if student['age'] == 30  %}
+                    class="bg-info"
+                {%endif%}
+                >
+                    <td>{{student['name']}}</td>
+                    <td>{{student['age']}}</td>
+                </tr>
+            {% endfor%}
+        </table>
+    </div>
+</body>
+</html>
