@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <h1>Dojo Survey</h1>
+    <form action="/process" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="location">Dojo Location:</label>
+        <input type="text" name="location" required><br>
+
+        <label for="language">Favorite Coding Language:</label>
+        <input type="text" name="language" required><br>
+
+        <label for="comment">Comment (optional):</label>
+        <textarea name="comment" rows="4" cols="50"></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

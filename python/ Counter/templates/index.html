@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visit Counter</title>
+</head>
+<body>
+    <h1>Welcome to the Visit Counter!</h1>
+    <p>You have visited this site <strong>{{ visit_count }}</strong> times.</p>
+    <a href="{{ url_for('destroy_session') }}">Clear Session and Reset Count</a>
+</body>
+</html>

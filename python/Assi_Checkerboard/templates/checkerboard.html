@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkerboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="checkerboard">
+        {% for i in range(rows) %}
+            <div class="row">
+                {% for j in range(cols) %}
+                    {% set color_class = 'black' if (i+j) % 2 == 0 else 'white' %}
+                    <div class="{{ color_class }}"></div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
