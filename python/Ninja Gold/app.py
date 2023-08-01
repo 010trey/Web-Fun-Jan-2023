@@ -2,7 +2,7 @@ from flask import Flask, render_template, request,session
 import random
 
 app = Flask(__name__)
-app.secret_key = "secret_key"  # Replace "secret_key" with your desired secret key for session management
+app.secret_key = "secret_key" 
 
 
 @app.route("/")
