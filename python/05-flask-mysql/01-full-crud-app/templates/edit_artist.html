@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
+    ">
+    <title>New Artist</title>
+</head>
+
+<body>
+    <div class="container ">
+        <h1>EDIT Artist </h1>
+        <div class="card shadow p-2 m-2">
+            <form action="/artists/{{artist.id}}/update" method="post">
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" class="form-control" name="first_name" value="{{artist.first_name}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Last Name</label>
+                    <input type="text" class="form-control" name="last_name" value="{{artist.last_name}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Nationality</label>
+                    <input type="text" class="form-control" name="nationality" value="{{artist.nationality}} "> 
+                </div>
+                <div class="form-group">
+                    <label for="">Rate</label>
+                    <input type="number" class="form-control" name="rate" value="{{artist.rate}}" >
+                </div>
+                <div class="form-group">
+                    <label for="">Image</label>
+                    <input type="text" class="form-control" name="image" value="{{artist.image}} ">
+                </div>
+                <div class="form-group">
+                    <label for="">I Dead ? </label>
+                    <input type="checkbox" name="is_dead" 
+                    {% if artist.is_dead == 1 %}
+                        checked
+                    {% endif %}
+                    >
+                </div>
+                <!-- <input type="hidden" name="id" value="{{artist.id}}"> -->
+                <input type="submit" value="Update" class="btn btn-warning btn-lg">
+            </form>
+        </div>
+        <a href="/" class="btn btn-dark">Cancel</a>
+    </div>
+</body>
+
+</html>
