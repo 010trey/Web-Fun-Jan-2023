@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div>
+
+    <div>
+
+        <header>
+            <h1>Online Store</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/products">Products</a>
+                <!-- Add more navigation links -->
+            </nav>
+        </header>
+
+        <main>
+            <h2>Products</h2>
+            <ul class="product-list">
+                {% for product in products %}
+                    <li class="product">
+                        <h3>{{ product.name }}</h3>
+                        <p>{{ product.description }}</p>
+                        <p>Price: ${{ product.price }}</p>
+                        <button class="add-to-cart" data-product-id="{{ product.id }}">Add to Cart</button>
+                    </li>
+                {% endfor %}
+            </ul>
+        </main>
+
+    </div>
+
+    <div>
+
+        <h1>Products</h1>
+        <ul>
+            {% for product in products %}
+                <li>
+                    {{ product.name }} - Price: {{ product.price }}
+                    <form method="POST" action="{{ url_for('add_to_cart', product_id=product.id) }}">
+                        <input type="submit" value="Add to Cart">
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+</div>
+<!-- Inside the <head> tag of your HTML template -->
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+</html>

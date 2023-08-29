@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+
+    <div>
+
+        <header>
+            <h1>Online Store</h1>
+            <nav>
+                <a href="/" class="btn btn-danger">Home</a>
+                <a href="/products/new" class="btn btn-danger">Add Product</a>
+                <a href="/logout" class="btn btn-danger">LOGOUT</a>
+                <!-- Add more navigation links -->
+            </nav>
+        </header>
+
+        <main>
+            <h2>Products</h2>
+            <ul class="product-list">
+                {% for product in products %}
+                    <li class="product">
+                        <img src="../static/project_image/{{product.image}}">
+                        <h3>{{ product.name }}</h3>
+                        <p>{{ product.description }}</p>
+                        <p>Price: ${{ product.price }}</p>
+                        <a href="/cart" class="btn btn-success">add to card</a>
+                        | <a href="/edit/{{product.id}}/edit "class="btn btn-success"> edit |</a> 
+                            <button type="submit">Delete</button>
+                    </li>
+                {% endfor %}
+            </ul>
+        </main>
+    </div>
+
+</div>
+<!-- Inside the <head> tag of your HTML template -->
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+</html>

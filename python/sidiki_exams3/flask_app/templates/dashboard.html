@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-between m-5">
+        <h2>Welcome, {{user.first_name}}</h2>
+        <div>
+            <a href="/bands" class="btn btn-warning">My Bands</a>
+            <a href="/bands/new" class="btn btn-warning">New Create</a>
+            <a href="/logout" class="btn btn-danger">LOGOUT</a>
+        </div>
+    </div>
+    <div class="m-5">
+        <h4>All TV Bands:</h4>
+
+        <table class="table table-striped text-center">
+            <tr>
+                <th>Band_Name</th>
+                <th>Music_Genre</th>
+                <th>Home_city</th>
+                <th>Actions</th>
+            </tr>
+            {% for band in bands %}
+            <tr>
+                <td>{{band.band_name}}</td>
+                <td>{{band.music_genre}}</td>
+                <td>{{band.homecity}}</td>
+                <td>
+                    {%if band.user_id == session['user_id'] %}
+                    | <a href="/bands/{{band.id}}/edit"> edit |</a>
+                    | <a href="/bands/{{band.id}}/destroy"> delete</a>
+                    {%endif%}
+                </td>
+            </tr>
+            {%endfor%} 
+        
+    </table>
+</div>
+</body>
+</html>

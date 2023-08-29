@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="px-5">
+        <button type="button" class="btn btn-primary float-end mb-3" onclick="window.location.href='/categories/new'">Add Category</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Created at</th>
+                    <th scope="col">Modified at</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cat in categories %}
+                <tr>
+                    <th scope="row">{{cat.id}}</th>
+                    <td>{{cat.name}}</td>
+                    <td>{{cat.created_at}}</td>
+                    <td>{{cat.updated_at}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

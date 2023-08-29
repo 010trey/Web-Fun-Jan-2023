@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders</title>
+</head>
+<body>
+    <div>
+
+    <div>
+    <h1>Your Orders</h1>
+    {% if orders %}
+    <ul>
+        {% for order in orders %}
+        <li>
+            Order ID: {{ order.id }} - Total Amount: {{ order.total_amount }}
+            <!-- Display order items if needed -->
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No orders available.</p>
+    {% endif %}
+</div>
+
+<div>
+    <h2>Shopping Cart</h2>
+
+    <h1>Shopping Cart</h1>
+    {% if cart %}
+    <ul>
+        {% for item in cart %}
+        <li>
+            {{ item.product_name }} - Price: {{ item.product_price }} - Quantity: {{ item.quantity }}
+        </li>
+        {% endfor %}
+
+    </ul>
+    <form method="POST" action="{{ url_for('create_order') }}">
+        <input type="submit" value="Place Order">
+    </form>
+
+    {% else %}
+    <p>Your cart is empty.</p>
+    {% endif %}
+    
+</div>
+
+</div>
+
+</body>
+</html>

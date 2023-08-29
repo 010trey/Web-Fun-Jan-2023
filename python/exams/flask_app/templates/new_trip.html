@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>New Trip</title>
+</head>
+<body>
+    
+    <div class="row text-center m-5">
+        <h2>Hello, {{user.first_name}}</h2>
+            <a href="/" class="btn btn-info btn-width-5px">Back Home
+            </a>
+            <a href="/logout" class="btn btn-danger">LOGOUT</a>
+            <form action="/trips/create" method="post">
+            </form>
+        <div class="col-8">
+            {%for message in get_flashed_messages()%}
+            <p class="text-danger">{{message}}</p>
+            {%endfor%}
+            <form action="/trips/create" method="post">
+                <div class="form-group">
+                    <label for="">Destination</label>
+                    <input type="text" name="destination" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Start Date</label>
+                    <input type="date" name="start_date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">End Date</label>
+                    <input type="date" name="end_date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Plan</label>
+                    <textarea name="plan" id="" cols="30" rows="5" class="form-control"></textarea>
+                </div>
+            <input type="submit" class="btn btn-info w-10" value="Submit">
+            <form action="/trips/{{user.id}}/destroy" method="post">
+            <input type="submit" value="Cancel" class="btn btn-danger">
+            
+    
+    </div>
+</body>
+</html> 

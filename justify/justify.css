@@ -6,7 +6,7 @@ body{
 #dojo {
     border: 1em solid green;
     margin: 1em;
-    padding: em;
+    padding: 1em; 
     width: 800px;
     height: 250px;
     background-color:white;
@@ -43,4 +43,5 @@ img {
     margin: 1em;
     height: 200px;
     width: 200px;
+    display: calc();
 }

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row m-1">
+    <div class="col-md-4 d-flex flex-wrap">
+        <div class="col-md-12 pending p-3">
+            <h3 class="w-100 mb-4">Pending</h3>
+            <div class="square-grid">
+                {% for table in tables %}
+                {% if table.stage == 1 %}
+                <button class="btn btn-lg btn-outline-dark square"
+                    onclick="window.location.href='/tables/order/{{table.id}}'">Table {{table.id}}</button>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-4 d-flex flex-wrap">
+        <div class="col-md-12 in-progress p-3">
+            <h3 class="w-100 mb-4">In Progress</h3>
+            <div class="square-grid">
+                {% for table in tables %}
+                {% if table.stage == 2 %}
+                <button class="btn btn-lg btn-outline-dark square"
+                    onclick="window.location.href='/tables/order/{{table.id}}'">Table
+                    {{table.id}}</button>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-4 d-flex flex-wrap">
+        <div class="col-md-12 ready p-3">
+            <h3 class="w-100 mb-4">Ready</h3>
+            <div class="square-grid">
+                {% for table in tables %}
+                {% if table.stage == 3 %}
+                <button class="btn btn-lg btn-outline-dark square"
+                    onclick="window.location.href='/tables/order/{{table.id}}'">Table {{table.id}}</button>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--  <div class="move" id="seat"> -->
+    <!--         <div class="col-6">
+            <div id="image-container">
+                <img src="{{ url_for('static', filename='img/2053202-200.png') }}" alt="" class="draggable">
+                <img src="{{ url_for('static', filename='img/2053202-200.png') }}" alt="" class="draggable">
+                <img src="{{ url_for('static', filename='img/2053202-200.png') }}" alt="" class="draggable">
+                <img src="{{ url_for('static', filename='img/2053202-200.png') }}" alt="" class="draggable">
+            </div>
+        </div> -->
+
+
+</div>
+
+{% endblock %}

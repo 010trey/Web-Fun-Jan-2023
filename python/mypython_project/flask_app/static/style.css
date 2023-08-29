@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.img{
+    width: 100%;
+}
+
+.homepage{
+    height: 2000%;
+    width: 100%;
+    background-color: silver;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: rgb(11, 2, 4);
+    /* min-height: 150px; */
+    /* padding: 0 100px; */
+    /* padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px; */
+}

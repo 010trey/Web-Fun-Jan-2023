@@ -19,6 +19,9 @@
     <div class="row text-center m-5">
         <div class="col-6">
             <form action="/recipes/create" method="post">
+                {% for message in get_flashed_messages(category_filter=[''])%}
+                        <p class="text-danger">{{message}}</p>
+                    {% endfor %}
                 <div class="form-group">
                     <label for="">Name</label>
                     <input type="text" name="name" class="form-control">
@@ -44,9 +47,6 @@
                 <input type="radio" name="under" class="form-control" value="0">
                 <label>No</label>
             </div>
-            {%for message in get_flashed_messages()%}
-            <p class="text-danger">{{message}}</p>
-            {%endfor%}
             <input type="submit" value="Submit" class="btn btn-success">
             </form>
         </div>

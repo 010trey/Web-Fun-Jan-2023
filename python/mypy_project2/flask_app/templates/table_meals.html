@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="px-5">
+    <div class="text-end p-3">
+        <h3>Table {{table_order.id}}</h3>
+        {% if table_order.stage == 2 %}
+        <div class="badge bg-warning text-dark text-wrap" style="width: 6rem;">
+            In Progress
+            {% elif table_order.stage == 3 %}
+        <div class="badge bg-success text-wrap" style="width: 6rem;">
+            Ready
+            {% else %}
+        <div class="badge bg-secondary text-wrap" style="width: 6rem;">
+            Pending
+            {% endif %}
+        </div>
+    </div>
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for meal in table_order.meals %}
+            <tr>
+                <td class="col-sm-2">{{meal.name}}</td>
+                <td class="col-sm-2">{{meal.category}}</td>
+                <td class="col-sm-6">{{meal.description}}</td>
+                <td class="col-sm-1">{{meal.price}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="d-flex gap-3 justify-content-center">
+        <!-- <button type="button" class="btn btn-danger">Pending</button> -->
+        <form action="/tables/change/stage" method="post">
+            <input type="hidden" name="id" value={{table_order.id}}>
+            <input type="hidden" name="stage" value=1>
+            <button class="btn btn-secondary">Pending</button>
+        </form>
+        <form action="/tables/change/stage" method="post">
+            <input type="hidden" name="id" value={{table_order.id}}>
+            <input type="hidden" name="stage" value=2>
+            <button class="btn btn-warning">In progress</button>
+        </form>
+        <form action="/tables/change/stage" method="post">
+            <input type="hidden" name="id" value={{table_order.id}}>
+            <input type="hidden" name="stage" value=3>
+            <button class="btn btn-success bg-subtle">Ready</button>
+        </form>
+        
+    </div>
+
+</div>
+
+
+{% endblock %}

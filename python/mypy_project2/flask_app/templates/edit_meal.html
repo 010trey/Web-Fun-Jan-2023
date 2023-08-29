@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="text-center">Edit Meal</h2>
+<div class="d-flex flex-column align-items-center">
+    <form class="w-50" action="/meals/edit" method="post" enctype=multipart/form-data>
+        <input type="hidden" name="id" value={{meal.id}}>
+        <div class="mb-3">
+            <label for="meal_name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="meal_name" name="name" value="{{meal.name}}">
+            {% for message in get_flashed_messages(category_filter=["name"]) %}
+            <p class="text-danger">{{message}}</p>
+            {% endfor %}
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="meal_price" class="form-label">Price</label>
+                <input type="number" class="form-control" id="meal_price" name="price" value={{meal.price}}>
+                {% for message in get_flashed_messages(category_filter=["price"]) %}
+                <p class="text-danger">{{message}}</p>
+                {% endfor %}
+            </div>
+            <div class="col">
+                <label for="meal_category" class="form-label">Category</label>
+                <select class="form-select" aria-label="Default select example" name="category_id">
+                    <option value={{meal.category_id}} selected>{{meal.category}}</option>
+                    {% for cat in categories %}
+                    <!-- {% if cat.id != meal.category_id %} -->
+                    <option value={{cat.id}}>{{cat.name}}</option>
+                    <!-- {% endif %} -->
+                    {% endfor %}
+                </select>
+                {% for message in get_flashed_messages(category_filter=["category"]) %}
+                <p class="text-danger">{{message}}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="meal_description" class="form-label">Description</label>
+            <textarea id="meal_description" cols="30" rows="5" class="form-control" name="description">{{meal.description}}</textarea>
+            {% for message in get_flashed_messages(category_filter=["description"]) %}
+            <p class="text-danger">{{message}}</p>
+            {% endfor %}
+        </div>
+<!--         <div class="mb-3">
+            <input type="file" name="file">
+            <input type=submit value=Upload>
+        </div> -->
+        <div class="input-group mb-3">
+            {# value="{{ url_for('static', filename='img/uploads/{{meal.image}}') }}" #}
+            <input type="file" class="form-control" id="inputFile" name="file">
+            <label class="input-group-text" for="inputFile">Upload a photo</label>
+            </div>
+        <button type="submit" class="btn btn-primary float-end">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

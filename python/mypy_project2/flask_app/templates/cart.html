@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for meal in table.meals %}
+                <tr>
+                    <td class="col-sm-3">
+                        {{meal.name}}
+                    </td>
+                    <td class="col-sm-7">
+                        {{meal.description}}
+                    </td>
+                    <td class="col-sm-2">
+                        {{meal.price}}
+                    </td>
+                    <td class="col-sm-2">
+                        <a href="/cart/{{meal.id}}/delete" class="text-danger">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+            <form action="/menu/confirm/order" method="post">
+                <input type="hidden" name="id" value={{table.id}}>
+                <input type="hidden" name="stage" value=1>
+                <button class="btn btn-primary">Confirm</button>
+            </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="px-5">
+    <h2>Orders</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Table</th>
+                <th scope="col">Meals</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td class="col">{{order.id}}</td>  
+                <td class="col">
+                    {% for meal in order.meals %}
+                    
+                    {{meal.name}}
+                    
+                    
+                    {% endfor %}
+                </td>
+                <td class="col">
+                    <b>{{ order.meals|sum(attribute='price') }}</b> TND
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

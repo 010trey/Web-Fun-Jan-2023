@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="px-5">
+    <h2>Meals</h2>
+    <button class="btn btn-primary float-end mb-3" onclick="window.location.href='/meals/new'">Add Meal</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Description</th>
+                <th scope="col">Category</th>
+                <th scope="col">Created at</th>
+                <th scope="col">Modified at</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for meal in meals %}
+            <tr>
+                <th scope="row">{{meal.id}}</th>
+                <td>{{meal.name}}</td>
+                <td>{{meal.price}}</td>
+                <td>{{meal.description}}</td>
+                <td>{{meal.category}}</td>
+                <td>{{meal.created_at}}</td>
+                <td>{{meal.updated_at}}</td>
+                <td>
+                    <a href="/meals/{{meal.id}}/edit">Edit</a> |
+                    <!-- <a href="" onclick="remove('{{meal.id}}')" class="text-danger">Delete</a> -->
+                    <a href="/meals/{{meal.id}}/delete" class="text-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<!-- <script>
+    function remove(id) {
+        let text = "You are going to remove a meal.";
+        if (confirm(text) == true) {
+            window.location.href = "/meals/" + id + "/delete";
+        }
+    }
+</script> -->
+{% endblock %}

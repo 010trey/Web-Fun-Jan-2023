@@ -1,0 +1,10 @@
+project_folder/
+├── saver.py
+├── templates/
+│   ├── home.html
+│   ├── contact.html
+│   ├── login.html
+│   ├── register.html
+│   └── navbar.html
+└── static/
+    └── logo.png
